@@ -18,15 +18,7 @@ export function decode(str) {
 	let res = 0;
 	let { length } = str;
 	for(let i = 0; i < length; i++) {
-		let char = str.charCodeAt(i);
-		if(char < 58) {
-			char = char - 48;
-		} else if(char < 91) {
-			char = char - 29;
-		} else {
-			char = char - 87;
-		}
-		res += char * (62 ** (length - i - 1));
+		res += CHARSET.indexOf(str[i]) * (62 ** (length - i - 1));
 	}
 	return res;
 }
