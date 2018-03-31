@@ -1,7 +1,7 @@
 {
 	"author": "FND",
 	"license": "MIT",
-	"main": "src/index.js",
+	"main": "src/ascii.js",
 	"scripts": {
 		"test": "npm run lint && npm run test:unit",
 		"test:unit": "mocha -r esm test/test_*.js",
